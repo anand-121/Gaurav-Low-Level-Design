@@ -10,6 +10,17 @@ public class Event {
     private final String description;
     private final long creationTime;
 
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id='" + id + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", eventType=" + eventType +
+                ", description='" + description + '\'' +
+                ", creationTime=" + creationTime +
+                '}';
+    }
+
     public Event(final String publisher,
                  final EventType eventType,
                  final String description,

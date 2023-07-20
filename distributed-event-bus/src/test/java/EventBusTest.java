@@ -50,6 +50,7 @@ public class EventBusTest {
 
         eventBus.publish(TOPIC_1, constructEvent(EventType.PRIORITY, "second event"));
         final Event secondEvent = eventBus.poll(TOPIC_1, SUBSCRIBER_1).toCompletableFuture().join();
+        System.out.println(secondEvent);
 
         Assert.assertEquals(EventType.PRIORITY, secondEvent.getEventType());
         Assert.assertEquals("second event", secondEvent.getDescription());

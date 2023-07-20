@@ -1,5 +1,6 @@
 import events.*;
 import models.*;
+import models.Record;
 
 import java.time.Duration;
 import java.util.List;
